@@ -23,3 +23,27 @@ Route :: get("/cadastro", function(){
 });
 
 Route :: get("/compras", "comprasController@index");
+
+Route::get("ator", "atorController@index");->middleware("checkAdmin");
+
+Route::get("ator/cadastro", "atorController@create");
+
+Route::post("ator/cadastro", "atorController@create");
+
+Route::get("ator/editar/{id}", "atorController@editar");
+
+Route::post("ator/editar/{id}", "atorController@editar");
+
+Route::get("filme", "filmeController@index");
+
+Route::get("filme/editar/{id}", "filmeController@editar");
+
+Route::post("filme/editar/{id}", "filmeController@editar");
+
+Route::get("filme/excluir/{id}", "filmeController@excluir");
+
+Route::post("filme/excluir/{id}", "filmeController@excluir");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

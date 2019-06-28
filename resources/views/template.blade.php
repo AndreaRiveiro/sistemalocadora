@@ -11,8 +11,8 @@
     <header>
         <h1>Cabeçalho do site</h1>
     </header>
-    <main class="continer">
-        @yield("conainer")
+    <main class="container">
+        @yield("container")
     </main>
     <footer>
         <h1>Rodape do site</h1>
